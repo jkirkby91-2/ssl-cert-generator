@@ -10,7 +10,7 @@ VALIDTIME=$7
 
 openssl req -new -newkey rsa:$KEYSIZE -days $VALIDTIME -nodes -x509 \
     -subj "/C=$COUNTRY/ST=$STATE/L=$CITY/O=Dis/CN=$HOSTNAME" \
-    -keyout $OUTPUTDIR/$HOSTNAME.key -out $OUTPUTDIR/$HOSTNAME.cert > /dev/null
+    -keyout $OUTPUTDIR/$HOSTNAME.key -out $OUTPUTDIR/$HOSTNAME.crt > /dev/null
 
 RET=$?
 
